@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- DOCTYPE memberitahu browser bahwa ini adalah file HTML versi terbaru (HTML5) -->
+
+<html lang="id">
+<!-- Tag <html> adalah tag utama yang membungkus seluruh halaman -->
+<!-- lang="id" artinya bahasa halaman ini adalah Indonesia -->
+
+<head>
+  <!-- Bagian <head> berisi pengaturan halaman, tidak terlihat langsung di browser -->
+
+  <meta charset="UTF-8">
+  <!-- Mengatur encoding teks agar huruf Indonesia (é, ñ, dll) tampil dengan benar -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Membuat halaman tampil proporsional di layar HP maupun laptop -->
+
+  <title>Biodata Diri Saya</title>
+  <!-- Teks yang muncul di tab browser -->
+
+  <style>
+    /* ===== STYLE (CSS) DIMULAI DI SINI ===== */
+    /* CSS adalah kode untuk mengatur tampilan: warna, ukuran, jarak, dll */
+    /* Format penulisan: selektor { properti: nilai; } */
+
+    /* --- PENGATURAN DASAR HALAMAN --- */
+    body {
+      /* 'body' memilih seluruh isi halaman */
+      background-color: #ADD8E6;   /* Warna latar belakang biru muda */
+      font-family: Arial, sans-serif; /* Jenis huruf yang digunakan */
+      margin: 0;                   /* Menghapus jarak bawaan browser di tepi halaman */
+      padding: 30px 20px;          /* Memberi jarak dalam: 30px atas-bawah, 20px kiri-kanan */
+    }
+
+    /* --- KARTU UTAMA --- */
+    .kartu {
+      /* '.kartu' memilih elemen yang punya class="kartu" */
+      background-color: white;     /* Warna latar kartu putih */
+      border-radius: 12px;         /* Membuat sudut kartu menjadi melengkung */
+      padding: 30px;               /* Jarak antara tepi kartu dan isinya */
+      max-width: 500px;            /* Lebar maksimal kartu 500 piksel */
+      margin: 0 auto;              /* margin: 0 atas-bawah, auto kiri-kanan = kartu di tengah */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Bayangan di bawah kartu */
+    }
+
+    /* --- BAGIAN HEADER / FOTO DAN NAMA --- */
+    .header {
+      text-align: center;          /* Meratakan semua isi ke tengah */
+      margin-bottom: 25px;         /* Jarak bawah header ke bagian berikutnya */
+    }
+
+    .avatar {
+      /* Lingkaran pengganti foto profil */
+      width: 90px;                 /* Lebar lingkaran */
+      height: 90px;                /* Tinggi lingkaran */
+      border-radius: 50%;          /* 50% = bentuk menjadi lingkaran sempurna */
+      background-color: #ADD8E6;   /* Warna latar lingkaran */
+      display: flex;               /* Menggunakan flexbox untuk menengahkan isi */
+      align-items: center;         /* Menengahkan secara vertikal */
+      justify-content: center;     /* Menengahkan secara horizontal */
+      margin: 0 auto 15px;         /* Menengahkan lingkaran + jarak bawah 15px */
+      font-size: 36px;             /* Ukuran huruf inisial di dalam lingkaran */
+      color: #1a5276;              /* Warna huruf inisial */
+      font-weight: bold;           /* Huruf tebal */
+    }
+
+    .header h1 {
+      /* Memilih tag <h1> yang berada di dalam elemen .header */
+      margin: 0 0 5px 0;          /* Jarak: atas 0, kanan 0, bawah 5px, kiri 0 */
+      font-size: 24px;             /* Ukuran huruf nama */
+      color: #1a3a5c;             /* Warna huruf biru gelap */
+    }
+
+    .header p {
+      /* Memilih tag <p> di dalam .header (kalimat jabatan/sekolah) */
+      margin: 0;
+      color: #777;                 /* Warna huruf abu-abu */
+      font-size: 14px;
+    }
+
+    /* --- GARIS PEMISAH --- */
+    hr {
+      /* Mengatur garis horizontal <hr> */
+      border: none;                /* Hapus border bawaan */
+      border-top: 1px solid #e0e0e0; /* Buat garis tipis berwarna abu-abu muda */
+      margin: 20px 0;              /* Jarak atas-bawah garis */
+    }
+
+    /* --- BARIS DATA BIODATA --- */
+    .baris {
+      /* Setiap baris data (label + nilai) */
+      display: flex;               /* Tampilkan label dan nilai berdampingan */
+      margin-bottom: 14px;         /* Jarak antar baris */
+      font-size: 15px;
+    }
+
+    .label {
+      /* Teks di kiri: "Nama", "Alamat", dll */
+      color: #888;                 /* Warna abu-abu */
+      min-width: 130px;            /* Lebar minimum kolom label agar rata */
+    }
+
+    .nilai {
+      /* Teks di kanan: isi datanya */
+      color: #333;                 /* Warna gelap */
+      font-weight: bold;           /* Huruf tebal */
+    }
+
+    /* --- DAFTAR HOBI (TAG/BADGE) --- */
+    .daftar-hobi {
+      display: flex;               /* Tampilkan hobi berjajar ke samping */
+      flex-wrap: wrap;             /* Jika tidak muat, pindah ke baris baru */
+      gap: 8px;                   /* Jarak antar tag hobi */
+      margin-top: 4px;
+    }
+
+    .tag-hobi {
+      /* Setiap kotak hobi */
+      background-color: #EBF5FB;   /* Latar biru sangat muda */
+      color: #1a5276;              /* Teks biru gelap */
+      padding: 5px 12px;           /* Jarak dalam kotak: 5px atas-bawah, 12px kiri-kanan */
+      border-radius: 20px;         /* Sudut sangat melengkung (bentuk pil) */
+      font-size: 13px;
+      border: 1px solid #AED6F1;   /* Garis tepi biru muda */
+    }
+
+  </style>
+  <!-- ===== CSS SELESAI ===== -->
+
+</head>
+
+<body>
+  <!-- Bagian <body> adalah isi halaman yang terlihat di browser -->
+
+  <!-- KARTU UTAMA -->
+  <div class="kartu">
+    <!-- <div> adalah kotak/wadah. class="kartu" menghubungkan ke style .kartu di atas -->
+
+    <!-- HEADER: AVATAR + NAMA -->
+    <div class="header">
+      <div class="avatar">M</div>
+      <!-- Ganti huruf "A" dengan huruf pertama namamu -->
+
+      <h1>Muhdis Sabil</h1>
+      <!-- <h1> = judul terbesar. Ganti dengan nama lengkapmu -->
+
+      <p>Siswa SMA Negeri 1 Purwareja Klampok</p>
+      <!-- Ganti dengan sekolah atau deskripsi singkatmu -->
+    </div>
+
+    <!-- GARIS PEMISAH -->
+    <hr>
+
+    <!-- BARIS-BARIS DATA BIODATA -->
+
+    <div class="baris">
+      <span class="label">Nama Lengkap</span>
+      <!-- <span> adalah teks inline. class="label" = gaya teks label -->
+      <span class="nilai">Muhdis Sabil</span>
+      <!-- Ganti dengan nama lengkapmu -->
+    </div>
+
+    <div class="baris">
+      <span class="label">Tempat, Tgl Lahir</span>
+      <span class="nilai">Banjarnegra, 16 Juli 2008</span>
+      <!-- Ganti dengan tempat dan tanggal lahirmu -->
+    </div>
+
+    <div class="baris">
+      <span class="label">Jenis Kelamin</span>
+      <span class="nilai">Laki-laki</span>
+    </div>
+
+    <div class="baris">
+      <span class="label">Agama</span>
+      <span class="nilai">Islam</span>
+    </div>
+
+    <div class="baris">
+      <span class="label">Alamat</span>
+      <span class="nilai">Gumelem Wetan</span>
+    </div>
+
+    <div class="baris">
+      <span class="label">Email</span>
+      <span class="nilai">muhdissabil@gmail.com</span>
+    </div>
+
+    <div class="baris">
+      <span class="label">No. Telepon</span>
+      <span class="nilai">0895360593779</span>
+    </div>
+
+    <!-- GARIS PEMISAH KEDUA -->
+    <hr>
+
+    <!-- BAGIAN HOBI -->
+    <div class="baris">
+      <span class="label">Hobi</span>
+      <!-- Nilai hobi menggunakan div agar bisa menampung beberapa tag -->
+      <div class="daftar-hobi">
+        <span class="tag-hobi">Main epep</span>
+        <span class="tag-hobi">Coding</span>
+        <span class="tag-hobi">Fotografi</span>
+        <span class="tag-hobi">Pusreng ml</span>
+        <span class="tag-hobi">Cooking</span>
+        <!-- Tambah atau hapus <span class="tag-hobi">...</span> sesuai hobimu -->
+      </div>
+    </div>
+
+  </div>
+  <!-- Akhir dari div class="kartu" -->
+
+</body>
+<!-- Akhir dari bagian body -->
+
+</html>
+<!-- Akhir dari seluruh halaman HTML -->
